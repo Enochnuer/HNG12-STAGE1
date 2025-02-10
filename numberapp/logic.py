@@ -4,6 +4,9 @@ from django.conf import settings
 
 def is_num_perfect(number):
     """Check if a number is perfect."""
+    if number <= 0:
+      return False
+
     return sum(num for num in range(1, number // 2 + 1) if number % num == 0) == number
 
 
